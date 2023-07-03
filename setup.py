@@ -2,7 +2,7 @@
 #can deploy it on pypi
 # and can install it anywhere
 HYPEN_E_DOT='-e .'
-from setuptools import find_packages,setup
+from setuptools import find_packages,setup#find all used packages 
 from typing import List
 def get_requirements(file_path:str)->List[str]:
     #this func will return the list of requirements
@@ -21,7 +21,7 @@ setup(
     author='Saksham Gupta',
     author_email='guptasaksham2311@gmail.com',
     packages=find_packages(),
-    install_requires=get_requirements('requirements.txt')
+    install_requires=get_requirements('requirements.txt')#install all packages
     
     
 )
