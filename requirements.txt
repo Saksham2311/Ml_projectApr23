@@ -6,4 +6,5 @@ scikit-learn
 typing
 catboost
 xgboost
+dill
 # -e .
