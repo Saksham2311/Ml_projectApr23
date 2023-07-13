@@ -8,6 +8,9 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 from src.components.data_transformation import DataTranformation,DataTranfromationConfig
+
+from src.components.model_trainer import ModelTrainer,ModelTrainerConfig
+
 # any i/p required for data ingestion(where to save training data,test data etc.) will be done by this data ingestion config 
 # through dataclass we can define class variable outside without use of init
 @dataclass 
@@ -51,5 +54,7 @@ if __name__=="__main__":
     train_data,test_data=obj.initiate_data_ingestion()
     
     data_transfromation=DataTranformation()
-    data_transfromation.initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,_=data_transfromation.initiate_data_transformation(train_data,test_data)
         
+    modelTrainer=ModelTrainer()
+    print(modelTrainer.initiate_model_trainer(train_arr,test_arr))
