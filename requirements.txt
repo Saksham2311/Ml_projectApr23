@@ -1,10 +1,11 @@
 # contains all the packages which we need to install while implementing the project~
+typing
 pandas
 numpy
 seaborn
 scikit-learn
-typing
 catboost
 xgboost
 dill
+Flask
 # -e .
